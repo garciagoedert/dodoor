@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoDoor - Aluguel de Consultórios</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="mask-icon" href="favicon.svg" color="#201840">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="space-cards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <span class="close-btn"><i class="fas fa-times"></i></span>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Como Funciona</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="login.html">Área do Proprietário</a></li>
+            <li><a href="#">Anunciar Espaço</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="arquivos/logo.svg" alt="DoDoor">
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="login-btn">Área do Proprietário</a>
+                <button class="anunciar-btn">Anúncio Fácil DoDoor</button>
+                <div class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <div class="search-item">
+                        <label>Local</label>
+                        <input type="text" placeholder="Florianópolis - Campeche">
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-item">
+                        <label>Data/Hora</label>
+                        <input type="text" placeholder="27/06 - 15:30/16:30">
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-item">
+                        <label>Tipo de Espaço</label>
+                        <input type="text" placeholder="Academia">
+                    </div>
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="category-item active">
+                <i class="fas fa-tooth"></i>
+                <span>Odonto</span>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Academia</span>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-heart"></i>
+                <span>Fisioterapia</span>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Coworking</span>
+            </div>
+        </section>
+
+        <section class="spaces-grid">
+            <h2>Espaços Disponíveis</h2>
+            <div class="grid">
+                <!-- Espaços serão inseridos dinamicamente via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Garantia DoDoor</a></li>
+                    <li><a href="#">Segurança da Imagem</a></li>
+                    <li><a href="#">Apoio PCD</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Espaço</h3>
+                <ul>
+                    <li><a href="#">Anuncie seu espaço no DoDoor</a></li>
+                    <li><a href="#">Recursos para Proprietários</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a href="#">Espaço responsável</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>DoDoor</h3>
+                <ul>
+                    <li><a href="#">NewSpace</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Fale com a gente</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DoDoor, Inc.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">Mapa do site</a>
+                <a href="#">Informações da empresa</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

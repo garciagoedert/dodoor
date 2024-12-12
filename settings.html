@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Do Door</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="settings-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        if (!localStorage.getItem('authToken')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Do Door</h1>
+            </div>
+            <nav>
+                <h2>MENU</h2>
+                <ul>
+                    <li data-page="Relatórios"><span class="material-icons">dashboard</span><span class="menu-text">Relatórios</span></li>
+                    <li data-page="Locações"><span class="material-icons">calendar_today</span><span class="menu-text">Locações</span></li>
+                    <li data-page="Gestão"><span class="material-icons">settings</span><span class="menu-text">Gestão</span></li>
+                    <li data-page="Avaliações dos Usuários"><span class="material-icons">star</span><span class="menu-text">Avaliações dos Usuários</span></li>
+                </ul>
+                <h2>OUTROS</h2>
+                <ul>
+                    <li class="active" data-page="Configurações"><span class="material-icons">tune</span><span class="menu-text">Configurações</span></li>
+                    <li data-page="Pagamentos"><span class="material-icons">payments</span><span class="menu-text">Pagamentos</span></li>
+                    <li data-page="Conta"><span class="material-icons">person</span><span class="menu-text">Conta</span></li>
+                    <li data-page="Ajuda"><span class="material-icons">help</span><span class="menu-text">Ajuda</span></li>
+                    <li id="logout" style="color: #EF4444;" data-page="Sair"><span class="material-icons">logout</span><span class="menu-text">Sair</span></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main>
+            <header>
+                <div class="search">
+                    <span class="material-icons">search</span>
+                    <input type="text" placeholder="Buscar configurações...">
+                </div>
+                <div class="profile">
+                    <div class="notifications">
+                        <span class="material-icons">notifications</span>
+                    </div>
+                    <div class="user">
+                        <img src="https://via.placeholder.com/40" alt="Foto do perfil">
+                        <span>Dr. Ana Luiza da Silva</span>
+                        <span class="material-icons">arrow_drop_down</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1>Configurações</h1>
+                
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <h3><span class="material-icons">notifications_active</span>Notificações</h3>
+                        <div class="settings-options">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Notificações por E-mail</h4>
+                                    <p>Receba atualizações sobre reservas e mensagens</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Notificações Push</h4>
+                                    <p>Receba alertas em tempo real no navegador</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Notificações SMS</h4>
+                                    <p>Receba confirmações por mensagem de texto</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3><span class="material-icons">security</span>Privacidade e Segurança</h3>
+                        <div class="settings-options">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Autenticação em Duas Etapas</h4>
+                                    <p>Adicione uma camada extra de segurança</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Histórico de Login</h4>
+                                    <p>Visualize os acessos recentes à sua conta</p>
+                                </div>
+                                <button class="action-btn">Ver Histórico</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3><span class="material-icons">language</span>Idioma e Região</h3>
+                        <div class="settings-options">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Idioma do Sistema</h4>
+                                    <p>Escolha o idioma de sua preferência</p>
+                                </div>
+                                <select class="select-input">
+                                    <option value="pt-BR">Português (Brasil)</option>
+                                    <option value="en">English</option>
+                                    <option value="es">Español</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Fuso Horário</h4>
+                                    <p>Configure seu fuso horário local</p>
+                                </div>
+                                <select class="select-input">
+                                    <option value="America/Sao_Paulo">Brasília (GMT-3)</option>
+                                    <option value="America/New_York">New York (GMT-4)</option>
+                                    <option value="Europe/London">London (GMT+1)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

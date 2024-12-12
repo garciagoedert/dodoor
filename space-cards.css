@@ -1,0 +1,126 @@
+/* Space Cards */
+.space-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.space-card:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+}
+
+.space-image {
+    position: relative;
+    height: 200px;
+}
+
+.space-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    z-index: 2;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn i {
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.favorite-btn i.favorited {
+    color: #EF4444;
+}
+
+.space-info {
+    padding: 1.5rem;
+}
+
+.space-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.space-info .location {
+    color: var(--gray-medium);
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.space-info .location i {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.space-info .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stars {
+    color: #FFC107;
+    font-size: 14px;
+}
+
+.rating-value {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.reviews {
+    color: var(--gray-medium);
+    font-size: 14px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,5 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 8h20v24h-20z" fill="#6366f1"/>
+    <path d="M40 8h20v24h-20z" fill="#4f46e5"/>
+    <text x="70" y="26" font-family="Arial" font-size="20" font-weight="bold" fill="#333">DOOR</text>
+</svg>

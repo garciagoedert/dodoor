@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locações - Do Door</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        if (!localStorage.getItem('authToken')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Do Door</h1>
+            </div>
+            <nav>
+                <h2>MENU</h2>
+                <ul>
+                    <li data-page="Relatórios"><span class="material-icons">dashboard</span><span class="menu-text">Relatórios</span></li>
+                    <li class="active" data-page="Locações"><span class="material-icons">calendar_today</span><span class="menu-text">Locações</span></li>
+                    <li data-page="Gestão"><span class="material-icons">settings</span><span class="menu-text">Gestão</span></li>
+                    <li data-page="Avaliações dos Usuários"><span class="material-icons">star</span><span class="menu-text">Avaliações dos Usuários</span></li>
+                </ul>
+                <h2>OUTROS</h2>
+                <ul>
+                    <li data-page="Configurações"><span class="material-icons">tune</span><span class="menu-text">Configurações</span></li>
+                    <li data-page="Pagamentos"><span class="material-icons">payments</span><span class="menu-text">Pagamentos</span></li>
+                    <li data-page="Conta"><span class="material-icons">person</span><span class="menu-text">Conta</span></li>
+                    <li data-page="Ajuda"><span class="material-icons">help</span><span class="menu-text">Ajuda</span></li>
+                    <li id="logout" style="color: #EF4444;" data-page="Sair"><span class="material-icons">logout</span><span class="menu-text">Sair</span></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main>
+            <header>
+                <div class="search">
+                    <span class="material-icons">search</span>
+                    <input type="text" placeholder="Buscar locações...">
+                </div>
+                <div class="profile">
+                    <div class="notifications">
+                        <span class="material-icons">notifications</span>
+                    </div>
+                    <div class="user">
+                        <img src="https://via.placeholder.com/40" alt="Foto do perfil">
+                        <span>Dr. Ana Luiza da Silva</span>
+                        <span class="material-icons">arrow_drop_down</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1>Locações</h1>
+                
+                <div class="locations-filters">
+                    <button class="filter-btn active">Todas</button>
+                    <button class="filter-btn">Ativas</button>
+                    <button class="filter-btn">Pendentes</button>
+                    <button class="filter-btn">Concluídas</button>
+                    <button class="filter-btn">Canceladas</button>
+                </div>
+
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>Consultório Odontológico</h3>
+                            <span class="status active">Ativa</span>
+                        </div>
+                        <div class="location-info">
+                            <p><span class="material-icons">person</span> Dr. João Silva</p>
+                            <p><span class="material-icons">calendar_today</span> 15 Jun, 2024</p>
+                            <p><span class="material-icons">schedule</span> 14:00 - 16:00</p>
+                            <p><span class="material-icons">attach_money</span> R$ 150,00</p>
+                        </div>
+                        <div class="location-actions">
+                            <button class="action-btn"><span class="material-icons">visibility</span> Ver Detalhes</button>
+                            <button class="action-btn"><span class="material-icons">chat</span> Mensagem</button>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>Sala de Fisioterapia</h3>
+                            <span class="status pending">Pendente</span>
+                        </div>
+                        <div class="location-info">
+                            <p><span class="material-icons">person</span> Dra. Maria Santos</p>
+                            <p><span class="material-icons">calendar_today</span> 16 Jun, 2024</p>
+                            <p><span class="material-icons">schedule</span> 09:00 - 11:00</p>
+                            <p><span class="material-icons">attach_money</span> R$ 120,00</p>
+                        </div>
+                        <div class="location-actions">
+                            <button class="action-btn"><span class="material-icons">check_circle</span> Aprovar</button>
+                            <button class="action-btn"><span class="material-icons">cancel</span> Recusar</button>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>Consultório Clínico</h3>
+                            <span class="status completed">Concluída</span>
+                        </div>
+                        <div class="location-info">
+                            <p><span class="material-icons">person</span> Dr. Pedro Oliveira</p>
+                            <p><span class="material-icons">calendar_today</span> 14 Jun, 2024</p>
+                            <p><span class="material-icons">schedule</span> 10:00 - 12:00</p>
+                            <p><span class="material-icons">attach_money</span> R$ 140,00</p>
+                        </div>
+                        <div class="location-actions">
+                            <button class="action-btn"><span class="material-icons">visibility</span> Ver Detalhes</button>
+                            <button class="action-btn"><span class="material-icons">star</span> Avaliar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

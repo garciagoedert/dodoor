@@ -1,0 +1,215 @@
+/* Payments page specific styles */
+.payments-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.balance-card {
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.balance-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.balance-amount h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.withdraw-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.withdraw-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.payment-methods-card {
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.add-method-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-method-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+}
+
+.payment-method .material-icons {
+    color: var(--primary-color);
+}
+
+.method-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.method-info p {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+
+.transactions-section {
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.transaction-filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-select {
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+.filter-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+}
+
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-icon.received {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.transaction-icon.sent {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.transaction-icon.pending {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.transaction-info p {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+
+.transaction-date {
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+}
+
+.transaction-amount {
+    font-weight: 600;
+}
+
+.transaction-amount.positive {
+    color: var(--success-color);
+}
+
+.transaction-amount.negative {
+    color: var(--danger-color);
+}
+
+.transaction-amount.pending {
+    color: var(--warning-color);
+}

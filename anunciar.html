@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncie na DoDoor - Aluguel de Consultórios</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="mask-icon" href="favicon.svg" color="#6366f1">
+    <link rel="stylesheet" href="anunciar-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="arquivos/logo.svg" alt="DoDoor">
+                </a>
+            </div>
+            <div class="nav-right">
+                <button class="anunciar-btn">Anúncio Fácil DoDoor</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Anúncie na DoDoor.</h1>
+                    <h2 class="subtitle">Você pode ganhar</h2>
+                    <div class="price-estimate">
+                        <h2 class="price">R$3.197</h2>
+                        <p class="estimate-details">7 diárias a um preço estimado de R$457</p>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Digite sua cidade (ex: Florianópolis)" autofocus>
+                </div>
+                <div class="slider">
+                    <div class="slider-bar">
+                        <div class="slider-progress"></div>
+                        <div class="slider-handle"></div>
+                    </div>
+                    <p class="slider-caption">Saiba como seus ganhos podem ser estimados</p>
+                </div>
+            </div>
+            <div class="map-section">
+                <div class="map-container">
+                    <div id="price-map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Com o Anúncio Fácil DoDoor, é muito simples anunciar</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <i class="fas fa-rocket fa-3x" style="color: var(--primary-color)"></i>
+                <h3>Comece Rápido</h3>
+                <p>Crie seu anúncio em poucos minutos e comece a receber reservas imediatamente. Nossa plataforma é intuitiva e fácil de usar.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-chart-line fa-3x" style="color: var(--primary-color)"></i>
+                <h3>Maximize seus Ganhos</h3>
+                <p>Nosso sistema inteligente ajuda você a definir o melhor preço para seu espaço, maximizando sua ocupação e rentabilidade.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt fa-3x" style="color: var(--primary-color)"></i>
+                <h3>100% Seguro</h3>
+                <p>Oferecemos proteção completa para você e seu espaço, com verificação de usuários e seguro contra danos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="support">
+        <div class="support-content">
+            <h2>Ainda tem dúvidas?</h2>
+            <p>Nossa equipe está pronta para ajudar você a começar</p>
+            <button class="support-btn">
+                <i class="fas fa-headset"></i>
+                Fale com nosso suporte
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Garantia DoDoor</a></li>
+                    <li><a href="#">Segurança da Imagem</a></li>
+                    <li><a href="#">Apoio PCD</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Espaço</h3>
+                <ul>
+                    <li><a href="#">Anuncie seu espaço no DoDoor</a></li>
+                    <li><a href="#">Recursos para Proprietários</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a href="#">Espaço responsável</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>DoDoor</h3>
+                <ul>
+                    <li><a href="#">NewSpace</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Fale com a gente</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DoDoor, Inc.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">Mapa do site</a>
+                <a href="#">Informações da empresa</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="maps.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Interatividade do slider
+            const sliderHandle = document.querySelector('.slider-handle');
+            const sliderProgress = document.querySelector('.slider-progress');
+            let isDragging = false;
+
+            sliderHandle.addEventListener('mousedown', () => {
+                isDragging = true;
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    const slider = document.querySelector('.slider-bar');
+                    const rect = slider.getBoundingClientRect();
+                    let x = e.clientX - rect.left;
+                    let percentage = (x / rect.width) * 100;
+                    
+                    percentage = Math.max(0, Math.min(100, percentage));
+                    
+                    sliderHandle.style.left = `${percentage}%`;
+                    sliderProgress.style.width = `${percentage}%`;
+
+                    // Atualiza o valor estimado com base na porcentagem
+                    const baseValue = 3197;
+                    const estimatedValue = Math.round(baseValue * (percentage / 100));
+                    document.querySelector('.price').textContent = `R$${estimatedValue.toLocaleString('pt-BR')}`;
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            // Animação para os elementos da página
+            const animateOnScroll = () => {
+                const features = document.querySelectorAll('.feature');
+                features.forEach((feature, index) => {
+                    const rect = feature.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        setTimeout(() => {
+                            feature.style.opacity = '1';
+                            feature.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Executa uma vez no carregamento
+
+            // Interatividade do campo de busca
+            const searchInput = document.querySelector('.search-box input');
+            searchInput.addEventListener('focus', () => {
+                document.querySelector('.search-box').classList.add('focused');
+            });
+
+            searchInput.addEventListener('blur', () => {
+                document.querySelector('.search-box').classList.remove('focused');
+            });
+
+            // Animação do texto principal
+            const heroText = document.querySelector('.hero-text');
+            heroText.style.opacity = '0';
+            heroText.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                heroText.style.transition = 'all 0.8s ease-out';
+                heroText.style.opacity = '1';
+                heroText.style.transform = 'translateY(0)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>

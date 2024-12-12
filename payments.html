@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamentos - Do Door</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="payments-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        if (!localStorage.getItem('authToken')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Do Door</h1>
+            </div>
+            <nav>
+                <h2>MENU</h2>
+                <ul>
+                    <li data-page="Relatórios"><span class="material-icons">dashboard</span><span class="menu-text">Relatórios</span></li>
+                    <li data-page="Locações"><span class="material-icons">calendar_today</span><span class="menu-text">Locações</span></li>
+                    <li data-page="Gestão"><span class="material-icons">settings</span><span class="menu-text">Gestão</span></li>
+                    <li data-page="Avaliações dos Usuários"><span class="material-icons">star</span><span class="menu-text">Avaliações dos Usuários</span></li>
+                </ul>
+                <h2>OUTROS</h2>
+                <ul>
+                    <li data-page="Configurações"><span class="material-icons">tune</span><span class="menu-text">Configurações</span></li>
+                    <li class="active" data-page="Pagamentos"><span class="material-icons">payments</span><span class="menu-text">Pagamentos</span></li>
+                    <li data-page="Conta"><span class="material-icons">person</span><span class="menu-text">Conta</span></li>
+                    <li data-page="Ajuda"><span class="material-icons">help</span><span class="menu-text">Ajuda</span></li>
+                    <li id="logout" style="color: #EF4444;" data-page="Sair"><span class="material-icons">logout</span><span class="menu-text">Sair</span></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main>
+            <header>
+                <div class="search">
+                    <span class="material-icons">search</span>
+                    <input type="text" placeholder="Buscar transações...">
+                </div>
+                <div class="profile">
+                    <div class="notifications">
+                        <span class="material-icons">notifications</span>
+                    </div>
+                    <div class="user">
+                        <img src="https://via.placeholder.com/40" alt="Foto do perfil">
+                        <span>Dr. Ana Luiza da Silva</span>
+                        <span class="material-icons">arrow_drop_down</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1>Pagamentos</h1>
+                
+                <div class="payments-overview">
+                    <div class="balance-card">
+                        <h3>Saldo Disponível</h3>
+                        <div class="balance-amount">
+                            <h2>R$ 2.450,00</h2>
+                            <button class="withdraw-btn">
+                                <span class="material-icons">account_balance_wallet</span>
+                                Sacar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods-card">
+                        <div class="card-header">
+                            <h3>Métodos de Pagamento</h3>
+                            <button class="add-method-btn">
+                                <span class="material-icons">add</span>
+                                Adicionar
+                            </button>
+                        </div>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <span class="material-icons">credit_card</span>
+                                <div class="method-info">
+                                    <h4>•••• •••• •••• 4589</h4>
+                                    <p>Mastercard - Expira em 12/25</p>
+                                </div>
+                                <span class="material-icons">more_vert</span>
+                            </div>
+                            <div class="payment-method">
+                                <span class="material-icons">account_balance</span>
+                                <div class="method-info">
+                                    <h4>Banco do Brasil</h4>
+                                    <p>Conta Corrente - Ag: 1234 CC: ••••5678</p>
+                                </div>
+                                <span class="material-icons">more_vert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="transactions-section">
+                    <div class="transactions-header">
+                        <h3>Histórico de Transações</h3>
+                        <div class="transaction-filters">
+                            <select class="filter-select">
+                                <option value="all">Todas</option>
+                                <option value="received">Recebidas</option>
+                                <option value="sent">Enviadas</option>
+                                <option value="pending">Pendentes</option>
+                            </select>
+                            <button class="filter-date">
+                                <span class="material-icons">calendar_today</span>
+                                Últimos 30 dias
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon received">
+                                <span class="material-icons">arrow_downward</span>
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Pagamento Recebido</h4>
+                                <p>De: Dr. João Silva</p>
+                                <span class="transaction-date">15 Jun, 2024</span>
+                            </div>
+                            <div class="transaction-amount positive">
+                                + R$ 150,00
+                            </div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="transaction-icon sent">
+                                <span class="material-icons">arrow_upward</span>
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Saque Realizado</h4>
+                                <p>Para: Banco do Brasil</p>
+                                <span class="transaction-date">14 Jun, 2024</span>
+                            </div>
+                            <div class="transaction-amount negative">
+                                - R$ 500,00
+                            </div>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="transaction-icon pending">
+                                <span class="material-icons">schedule</span>
+                            </div>
+                            <div class="transaction-info">
+                                <h4>Pagamento Pendente</h4>
+                                <p>De: Dra. Maria Santos</p>
+                                <span class="transaction-date">13 Jun, 2024</span>
+                            </div>
+                            <div class="transaction-amount pending">
+                                R$ 120,00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

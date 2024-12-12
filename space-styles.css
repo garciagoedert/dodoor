@@ -1,0 +1,335 @@
+/* Estilos específicos para a página de detalhes do espaço */
+.space-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Galeria de imagens */
+.space-gallery {
+    margin-bottom: 2rem;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.thumbnail-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.thumbnail-grid img:hover {
+    opacity: 0.8;
+}
+
+/* Conteúdo principal */
+.space-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.space-header {
+    margin-bottom: 2rem;
+}
+
+.space-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    color: var(--gray-medium);
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating i {
+    color: #ffd700;
+}
+
+.reviews {
+    color: var(--gray-medium);
+}
+
+/* Descrição e destaques */
+.space-description h2 {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+}
+
+.highlights {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.highlights li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.highlights li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Grid de comodidades */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.amenity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.amenity i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Card de reserva */
+.booking-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 2rem;
+}
+
+.price {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.amount {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.period {
+    color: var(--gray-medium);
+    font-size: 1.2rem;
+}
+
+/* Calendário Estilizado */
+.calendar {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--gray-light);
+}
+
+.calendar-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.calendar-header button:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0.5rem;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: 500;
+    color: var(--gray-medium);
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 2px;
+    transition: all 0.2s;
+}
+
+.day:not(.empty):hover {
+    background-color: var(--gray-light);
+}
+
+.day.today {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.day.selected {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.day.empty {
+    cursor: default;
+}
+
+/* Botão de reserva */
+.reserve-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reserve-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.booking-info {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+}
+
+/* Seção de localização */
+.location-section {
+    margin-top: 3rem;
+}
+
+.location-section h2 {
+    margin-bottom: 1rem;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para o Leaflet */
+.leaflet-container {
+    font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.leaflet-popup-content {
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.leaflet-control-zoom {
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-control-zoom a {
+    background-color: white !important;
+    color: var(--text-color) !important;
+    border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background-color: var(--gray-light) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .space-content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking-card {
+        position: static;
+        margin-top: 2rem;
+        order: -1;
+    }
+
+    #map {
+        height: 300px;
+    }
+}

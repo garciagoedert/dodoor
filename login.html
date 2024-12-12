@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Do Door</title>
+    <link rel="stylesheet" href="login-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <h1>Do Door</h1>
+            </div>
+            <h2>Acesso do Proprietário</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required>
+                        <span class="material-icons toggle-password">visibility</span>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <span>Lembrar-me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+            <p class="signup-link">
+                Ainda não tem uma conta? <a href="#">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle password visibility
+            const togglePassword = document.querySelector('.toggle-password');
+            const passwordInput = document.querySelector('#password');
+
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.textContent = type === 'password' ? 'visibility' : 'visibility_off';
+            });
+
+            // Handle form submission
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simula autenticação bem-sucedida
+                localStorage.setItem('authToken', 'temp_token_123');
+                
+                // Se checkbox "Lembrar-me" estiver marcado
+                if (document.getElementById('remember').checked) {
+                    localStorage.setItem('rememberLogin', 'true');
+                }
+
+                // Redireciona para o dashboard
+                window.location.href = 'dashboard.html';
+            });
+        });
+
+        // Verifica se já está autenticado
+        if (localStorage.getItem('authToken')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
