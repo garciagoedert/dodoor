@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamentos - Do Door</title>
     <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="dashboard-menu.css">
     <link rel="stylesheet" href="payments-styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
@@ -14,10 +15,14 @@
     </script>
 </head>
 <body>
+    <button class="menu-toggle">
+        <span class="material-icons">menu</span>
+    </button>
+
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <h1>Do Door</h1>
+                <h1>DoDoor</h1>
             </div>
             <nav>
                 <h2>MENU</h2>
@@ -33,7 +38,7 @@
                     <li class="active" data-page="Pagamentos"><span class="material-icons">payments</span><span class="menu-text">Pagamentos</span></li>
                     <li data-page="Conta"><span class="material-icons">person</span><span class="menu-text">Conta</span></li>
                     <li data-page="Ajuda"><span class="material-icons">help</span><span class="menu-text">Ajuda</span></li>
-                    <li id="logout" style="color: #EF4444;" data-page="Sair"><span class="material-icons">logout</span><span class="menu-text">Sair</span></li>
+                    <li id="logout" style="color: var(--danger-color);" data-page="Sair"><span class="material-icons">logout</span><span class="menu-text">Sair</span></li>
                 </ul>
             </nav>
         </aside>

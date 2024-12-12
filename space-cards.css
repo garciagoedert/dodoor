@@ -1,4 +1,16 @@
 /* Space Cards */
+.spaces-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.spaces-grid h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
 .space-card {
     background: white;
     border-radius: 12px;
@@ -161,16 +173,21 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     padding: 1.5rem 0;
-    margin: 0 auto;
-    max-width: 1200px;
 }
 
 /* Responsividade */
 @media (max-width: 1024px) {
+    .spaces-grid {
+        padding: 0 1rem;
+    }
+
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         gap: 1.5rem;
-        padding: 1rem;
+    }
+
+    .spaces-grid h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -204,13 +221,21 @@
     .space-card:hover {
         transform: translateY(-3px);
     }
+
+    .spaces-grid h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .spaces-grid {
+        padding: 0 0.75rem;
+    }
+
     .grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-        padding: 0.75rem;
     }
 
     .space-image {
@@ -273,6 +298,11 @@
     /* Feedback tátil */
     .space-card:active {
         transform: scale(0.98);
+    }
+
+    .spaces-grid h2 {
+        font-size: 1.125rem;
+        margin-bottom: 0.875rem;
     }
 }
 

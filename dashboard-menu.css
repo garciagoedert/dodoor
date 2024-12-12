@@ -30,19 +30,16 @@
 .sidebar .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
     margin-bottom: 2rem;
-}
-
-.sidebar .logo img {
-    height: 32px;
-    width: auto;
+    padding: 0.5rem;
 }
 
 .sidebar .logo h1 {
     color: var(--primary-color);
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 .sidebar nav h2 {
@@ -198,6 +195,10 @@ main {
 @media (max-width: 1024px) {
     :root {
         --sidebar-width: 240px;
+    }
+
+    .sidebar .logo h1 {
+        font-size: 1.5rem;
     }
 }
 
