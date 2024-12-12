@@ -18,6 +18,40 @@ function initDashboard() {
         updateDashboardData();
     };
     document.head.appendChild(script);
+
+    // Inicializa o menu mobile
+    setupMobileMenu();
+}
+
+// Configurar menu mobile
+function setupMobileMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Fecha o menu ao clicar em um item do menu no mobile
+        document.querySelectorAll('.sidebar nav ul li').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+
+        // Fecha o menu ao clicar fora dele no mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(e.target) && 
+                !menuToggle.contains(e.target) && 
+                sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+    }
 }
 
 // Configurar event listeners
