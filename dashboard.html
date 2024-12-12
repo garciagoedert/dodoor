@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Do Door</title>
+    <link rel="stylesheet" href="dashboard-menu.css">
     <link rel="stylesheet" href="dashboard-styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
-        // Adiciona um token temporário para teste
         if (!localStorage.getItem('authToken')) {
             localStorage.setItem('authToken', 'temp_token_123');
         }
@@ -15,6 +15,10 @@
 </head>
 <body>
     <div class="container">
+        <button class="menu-toggle">
+            <span class="material-icons">menu</span>
+        </button>
+        
         <aside class="sidebar">
             <div class="logo">
                 <h1>Do Door</h1>
@@ -57,19 +61,37 @@
             </header>
 
             <div class="dashboard-content">
-                <h1>Dashboard</h1>
+                <div class="dashboard-header">
+                    <h1>Relatórios</h1>
+                    <div class="period-filter">
+                        <button class="filter-btn active" data-period="7">7 dias</button>
+                        <button class="filter-btn" data-period="30">30 dias</button>
+                        <button class="filter-btn" data-period="90">90 dias</button>
+                        <button class="filter-btn custom" data-period="custom">
+                            <span class="material-icons">calendar_today</span>
+                            Personalizado
+                        </button>
+                        <button class="export-btn">
+                            <span class="material-icons">download</span>
+                            Exportar
+                        </button>
+                    </div>
+                </div>
                 
                 <div class="metrics-grid">
                     <div class="metric-card">
                         <div class="metric-header">
-                            <h3>Valores Recebidos</h3>
-                            <button class="view-report">Ver Relatório</button>
+                            <h3>Receita Total</h3>
+                            <div class="metric-actions">
+                                <button class="view-details">Detalhes</button>
+                                <span class="material-icons">more_vert</span>
+                            </div>
                         </div>
                         <div class="metric-value">
                             <h2>R$ 1.536,00</h2>
                             <span class="trend positive">
                                 <span class="material-icons">arrow_upward</span>
-                                2.1% vs última semana
+                                2.1% vs período anterior
                             </span>
                         </div>
                         <div class="chart">
@@ -79,47 +101,150 @@
 
                     <div class="metric-card">
                         <div class="metric-header">
-                            <h3>Período de Locação</h3>
-                            <button class="view-report">Ver Relatório</button>
+                            <h3>Taxa de Ocupação</h3>
+                            <div class="metric-actions">
+                                <button class="view-details">Detalhes</button>
+                                <span class="material-icons">more_vert</span>
+                            </div>
+                        </div>
+                        <div class="metric-value">
+                            <h2>68%</h2>
+                            <span class="trend positive">
+                                <span class="material-icons">arrow_upward</span>
+                                5.3% vs período anterior
+                            </span>
+                        </div>
+                        <div class="occupancy-chart">
+                            <!-- Gráfico será implementado com JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h3>Horários Mais Reservados</h3>
+                            <div class="metric-actions">
+                                <button class="view-details">Detalhes</button>
+                                <span class="material-icons">more_vert</span>
+                            </div>
                         </div>
                         <div class="period-chart">
-                            <!-- Gráfico de pizza será implementado com JavaScript -->
+                            <!-- Gráfico será implementado com JavaScript -->
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color morning"></span>
+                                Manhã (35%)
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color afternoon"></span>
+                                Tarde (45%)
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color night"></span>
+                                Noite (20%)
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bottom-grid">
-                    <div class="ratings-card">
-                        <h3>Suas Avaliações</h3>
-                        <div class="ratings-chart">
-                            <!-- Gráfico de avaliações será implementado com JavaScript -->
+                    <div class="performance-card">
+                        <div class="card-header">
+                            <h3>Desempenho por Sala</h3>
+                            <div class="card-actions">
+                                <button class="view-details">Ver Todos</button>
+                                <span class="material-icons">more_vert</span>
+                            </div>
+                        </div>
+                        <div class="performance-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sala</th>
+                                        <th>Ocupação</th>
+                                        <th>Receita</th>
+                                        <th>Avaliação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Consultório Odontológico</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 85%"></div>
+                                                <span>85%</span>
+                                            </div>
+                                        </td>
+                                        <td>R$ 750,00</td>
+                                        <td>
+                                            <div class="rating">
+                                                <span class="material-icons">star</span>
+                                                4.8
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Consultório Clínico</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 72%"></div>
+                                                <span>72%</span>
+                                            </div>
+                                        </td>
+                                        <td>R$ 600,00</td>
+                                        <td>
+                                            <div class="rating">
+                                                <span class="material-icons">star</span>
+                                                4.6
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sala de Recepção</td>
+                                        <td>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 45%"></div>
+                                                <span>45%</span>
+                                            </div>
+                                        </td>
+                                        <td>R$ 186,00</td>
+                                        <td>
+                                            <div class="rating">
+                                                <span class="material-icons">star</span>
+                                                4.5
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <div class="popular-rooms">
-                        <div class="rooms-header">
-                            <h3>Salas mais reservadas</h3>
+                    <div class="insights-card">
+                        <div class="card-header">
+                            <h3>Insights</h3>
+                            <span class="material-icons">lightbulb</span>
                         </div>
-                        <div class="rooms-list">
-                            <div class="room-item">
-                                <img src="https://via.placeholder.com/40" alt="Sala">
-                                <div class="room-info">
-                                    <h4>Consultório Odontológico</h4>
-                                    <span>R$/h 75,00</span>
+                        <div class="insights-list">
+                            <div class="insight-item positive">
+                                <span class="material-icons">trending_up</span>
+                                <div class="insight-content">
+                                    <h4>Alta demanda detectada</h4>
+                                    <p>Terças e quintas à tarde têm alta procura. Considere ajustar os preços.</p>
                                 </div>
                             </div>
-                            <div class="room-item">
-                                <img src="https://via.placeholder.com/40" alt="Sala">
-                                <div class="room-info">
-                                    <h4>Consultório Clínico</h4>
-                                    <span>R$/h 60,00</span>
+                            <div class="insight-item warning">
+                                <span class="material-icons">schedule</span>
+                                <div class="insight-content">
+                                    <h4>Horários ociosos</h4>
+                                    <p>Baixa ocupação nas segundas pela manhã. Oportunidade para promoções.</p>
                                 </div>
                             </div>
-                            <div class="room-item">
-                                <img src="https://via.placeholder.com/40" alt="Sala">
-                                <div class="room-info">
-                                    <h4>Sala de Recepção</h4>
-                                    <span>R$/h 45,00</span>
+                            <div class="insight-item info">
+                                <span class="material-icons">people</span>
+                                <div class="insight-content">
+                                    <h4>Clientes recorrentes</h4>
+                                    <p>60% das reservas são de clientes que retornam. Considere um programa de fidelidade.</p>
                                 </div>
                             </div>
                         </div>
