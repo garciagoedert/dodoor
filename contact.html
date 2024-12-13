@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | DoDoor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="arquivos/logo.svg" alt="DoDoor">
+            </a>
+            <div class="nav-right">
+                <a href="anunciar.html" class="login-btn">
+                    <i class="fas fa-plus"></i>
+                    Anunciar espaço
+                </a>
+                <div class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-content">
+        <section class="hero-section">
+            <h1>Entre em Contato</h1>
+            <p class="subtitle">Estamos aqui para ajudar você</p>
+        </section>
+
+        <section class="contact-options">
+            <div class="container">
+                <div class="options-grid">
+                    <div class="option-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Suporte 24/7</h3>
+                        <p>Atendimento disponível todos os dias, 24 horas</p>
+                        <a href="tel:0800123456" class="contact-link">0800 123 456</a>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-mail</h3>
+                        <p>Responderemos em até 24 horas úteis</p>
+                        <a href="mailto:contato@dodoor.com.br" class="contact-link">contato@dodoor.com.br</a>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Chat Online</h3>
+                        <p>Converse com nossa equipe em tempo real</p>
+                        <button class="chat-button">Iniciar chat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <h2>Envie sua Mensagem</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="suporte">Suporte técnico</option>
+                            <option value="duvidas">Dúvidas gerais</option>
+                            <option value="parceria">Parcerias</option>
+                            <option value="sugestoes">Sugestões</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Como faço para anunciar meu espaço?</h3>
+                        <p>Clique em "Anunciar espaço" no menu superior e siga o passo a passo para cadastrar seu espaço.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Qual o prazo para receber o pagamento?</h3>
+                        <p>Os pagamentos são processados em até 24 horas após a conclusão da reserva.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Como funciona a garantia DoDoor?</h3>
+                        <p>Nossa garantia protege tanto proprietários quanto usuários em todas as reservas realizadas pela plataforma.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Posso cancelar uma reserva?</h3>
+                        <p>Sim, as reservas podem ser canceladas conforme nossa política de cancelamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DoDoor</h3>
+                <ul>
+                    <li><a href="about.html">Sobre nós</a></li>
+                    <li><a href="how-it-works.html">Como funciona</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Proprietários</h3>
+                <ul>
+                    <li><a href="list-space.html">Anunciar espaço</a></li>
+                    <li><a href="help-center.html">Central de ajuda</a></li>
+                    <li><a href="resources.html">Recursos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="guarantee.html">Garantia DoDoor</a></li>
+                    <li><a href="security.html">Segurança</a></li>
+                    <li><a href="accessibility.html">Apoio PCD</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Comunidade</h3>
+                <ul>
+                    <li><a href="responsible-space.html">Espaço responsável</a></li>
+                    <li><a href="newspace.html">NewSpace</a></li>
+                    <li><a href="careers.html">Carreiras</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DoDoor. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-menu">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="login.html"><i class="fas fa-user"></i> Entrar</a></li>
+            <li><a href="list-space.html" class="anunciar-menu-item"><i class="fas fa-plus"></i> Anunciar espaço</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre nós</a></li>
+            <li><a href="help-center.html"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

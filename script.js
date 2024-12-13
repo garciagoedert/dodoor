@@ -21,6 +21,59 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
     });
 });
 
+// Busca Modal
+const searchModal = document.querySelector('.search-modal');
+const closeSearchBtn = document.querySelector('.close-search');
+const searchTabs = document.querySelectorAll('.search-tabs .tab');
+const searchTriggers = document.querySelectorAll('.search-trigger, .mobile-search-trigger');
+
+function openSearchModal() {
+    searchModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    const searchInput = searchModal.querySelector('.search-input');
+    if (searchInput) {
+        searchInput.focus();
+    }
+}
+
+function closeSearchModal() {
+    searchModal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Adiciona evento de clique para todos os elementos que devem abrir o modal
+searchTriggers.forEach(trigger => {
+    trigger.addEventListener('click', openSearchModal);
+});
+
+closeSearchBtn?.addEventListener('click', closeSearchModal);
+
+// Tabs de busca
+searchTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        searchTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+    });
+});
+
+// Limpar busca
+const clearSearchBtn = document.querySelector('.clear-search');
+const searchInput = document.querySelector('.search-input');
+
+clearSearchBtn?.addEventListener('click', () => {
+    if (searchInput) {
+        searchInput.value = '';
+        searchInput.focus();
+    }
+});
+
+// Botão de buscar
+const submitSearchBtn = document.querySelector('.submit-search');
+submitSearchBtn?.addEventListener('click', () => {
+    // Aqui você implementaria a lógica de busca
+    closeSearchModal();
+});
+
 // Espaços disponíveis
 const spaces = [
     {

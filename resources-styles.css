@@ -1,0 +1,342 @@
+.resources-content {
+    padding-top: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section .subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Tools Section */
+.tools-section {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.tools-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.tool-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.tool-card p {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tool-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.tool-link:hover {
+    color: #2c1f5a;
+}
+
+/* Guides Section */
+.guides-section {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+.guides-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.guide-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-content h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.guide-content p {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.guide-topics {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.guide-topics li {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.guide-topics li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #2c1f5a;
+}
+
+/* Resources Section */
+.resources-section {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.resources-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.resource-info h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.resource-info p {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #2c1f5a;
+}
+
+/* Support Section */
+.support-section {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+.support-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.support-channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.support-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.support-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.support-card p {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.support-contact {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.support-contact:hover {
+    background-color: #2c1f5a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.125rem;
+    }
+
+    .tools-grid,
+    .guides-grid,
+    .resources-grid,
+    .support-channels {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .resource-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .resource-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-card,
+    .guide-card,
+    .support-card {
+        padding: 1.5rem;
+    }
+
+    .guide-topics {
+        margin-bottom: 1.5rem;
+    }
+
+    .support-contact {
+        width: 100%;
+    }
+}

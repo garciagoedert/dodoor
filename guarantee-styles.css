@@ -1,0 +1,327 @@
+.guarantee-content {
+    padding-top: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section .subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Coverage Section */
+.coverage-section {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.coverage-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.coverage-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.coverage-card:hover {
+    transform: translateY(-5px);
+}
+
+.coverage-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.coverage-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.coverage-card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+.benefits-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.benefit-column h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.benefits-list {
+    list-style: none;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.benefits-list li:hover {
+    transform: translateX(5px);
+}
+
+.benefits-list i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.benefits-list span {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* Process Section */
+.process-section {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.process-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.step h3 {
+    color: var(--text-color);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.25rem;
+}
+
+.step p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Terms Section */
+.terms-section {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+.terms-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.terms-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.terms-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.terms-card ul {
+    list-style: none;
+}
+
+.terms-card ul li {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.terms-card ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.25rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.cta-section h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.cta-btn.primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.cta-btn.primary:hover {
+    background-color: var(--background-color);
+}
+
+.cta-btn.secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-btn.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.125rem;
+    }
+
+    .coverage-grid,
+    .benefits-columns,
+    .process-steps,
+    .terms-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .benefits-list li {
+        padding: 1rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coverage-card,
+    .terms-card {
+        padding: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

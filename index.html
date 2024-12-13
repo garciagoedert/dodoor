@@ -16,22 +16,76 @@
     <div class="mobile-menu">
         <span class="close-btn"><i class="fas fa-times"></i></span>
         <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Como Funciona</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="login.html">Área do Proprietário</a></li>
-            <li><a href="#">Anunciar Espaço</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="about.html">Sobre Nós</a></li>
+            <li><a href="how-it-works.html">Como Funciona</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li><a href="list-space.html" class="anunciar-menu-item"><i class="fas fa-plus-circle"></i> Anunciar Espaço</a></li>
+            <li><a href="login.html" class="login-menu-item"><i class="fas fa-user"></i> Entrar</a></li>
         </ul>
+    </div>
+
+    <!-- Modal de Busca -->
+    <div class="search-modal">
+        <div class="search-modal-header">
+            <button class="close-search"><i class="fas fa-times"></i></button>
+            <div class="search-tabs">
+                <button class="tab active">Acomodações</button>
+                <button class="tab">Experiências</button>
+            </div>
+        </div>
+        <div class="search-modal-content">
+            <h2>Para onde?</h2>
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar destinos" class="search-input">
+            </div>
+            <div class="search-suggestions">
+                <div class="suggestion-item">
+                    <div class="suggestion-icon world-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <span>Busca flexível</span>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon map-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <span>Brasil</span>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon map-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <span>América do Sul</span>
+                </div>
+            </div>
+            <div class="search-filters">
+                <div class="filter-item">
+                    <label>Quando</label>
+                    <button>Uma semana</button>
+                </div>
+                <div class="filter-item">
+                    <label>Quem</label>
+                    <button>Adicionar hóspedes</button>
+                </div>
+            </div>
+            <div class="search-actions">
+                <button class="clear-search">Limpar tudo</button>
+                <button class="submit-search">Buscar</button>
+            </div>
+        </div>
     </div>
 
     <header>
         <nav>
             <div class="logo">
-                <img src="arquivos/logo.svg" alt="DoDoor">
+                <a href="index.html">
+                    <img src="arquivos/logo.svg" alt="DoDoor">
+                </a>
             </div>
             <div class="nav-right">
-                <button class="anunciar-btn">Anúncio Fácil DoDoor</button>
+                <a href="list-space.html" class="login-btn"><i class="fas fa-plus"></i> Anunciar espaço</a>
                 <div class="menu-icon">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -45,20 +99,27 @@
                 <div class="search-box">
                     <div class="search-item">
                         <label>Local</label>
-                        <input type="text" placeholder="Florianópolis - Campeche">
+                        <input type="text" placeholder="Florianópolis - Campeche" class="search-trigger">
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-item">
                         <label>Data/Hora</label>
-                        <input type="text" placeholder="27/06 - 15:30/16:30">
+                        <input type="text" placeholder="27/06 - 15:30/16:30" class="search-trigger">
                     </div>
                     <div class="search-divider"></div>
                     <div class="search-item">
                         <label>Tipo de Espaço</label>
-                        <input type="text" placeholder="Academia">
+                        <input type="text" placeholder="Academia" class="search-trigger">
                     </div>
                     <button class="search-button">
                         <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- Campo de busca mobile -->
+                <div class="mobile-search-box">
+                    <button class="mobile-search-trigger">
+                        <i class="fas fa-search"></i>
+                        <span>Para onde?</span>
                     </button>
                 </div>
             </div>
@@ -94,40 +155,44 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Atendimento</h3>
-                <ul>
-                    <li><a href="#">Central de Ajuda</a></li>
-                    <li><a href="#">Garantia DoDoor</a></li>
-                    <li><a href="#">Segurança da Imagem</a></li>
-                    <li><a href="#">Apoio PCD</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Espaço</h3>
-                <ul>
-                    <li><a href="#">Anuncie seu espaço no DoDoor</a></li>
-                    <li><a href="#">Recursos para Proprietários</a></li>
-                    <li><a href="#">Comunidade</a></li>
-                    <li><a href="#">Espaço responsável</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
                 <h3>DoDoor</h3>
                 <ul>
-                    <li><a href="#">NewSpace</a></li>
-                    <li><a href="#">Carreiras</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Fale com a gente</a></li>
+                    <li><a href="about.html">Sobre nós</a></li>
+                    <li><a href="how-it-works.html">Como funciona</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Proprietários</h3>
+                <ul>
+                    <li><a href="list-space.html">Anunciar espaço</a></li>
+                    <li><a href="help-center.html">Central de ajuda</a></li>
+                    <li><a href="resources.html">Recursos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="guarantee.html">Garantia DoDoor</a></li>
+                    <li><a href="security.html">Segurança</a></li>
+                    <li><a href="accessibility.html">Apoio PCD</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Comunidade</h3>
+                <ul>
+                    <li><a href="responsible-space.html">Espaço responsável</a></li>
+                    <li><a href="newspace.html">NewSpace</a></li>
+                    <li><a href="careers.html">Carreiras</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 DoDoor, Inc.</p>
+            <p>&copy; 2024 DoDoor. Todos os direitos reservados.</p>
             <div class="footer-links">
                 <a href="#">Privacidade</a>
                 <a href="#">Termos</a>
-                <a href="#">Mapa do site</a>
-                <a href="#">Informações da empresa</a>
+                <a href="#">Cookies</a>
             </div>
         </div>
     </footer>

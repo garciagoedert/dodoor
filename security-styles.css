@@ -1,0 +1,342 @@
+.security-content {
+    padding-top: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section .subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Features Section */
+.features-section {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.features-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.feature-card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Process Section */
+.process-section {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+.process-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.step h3 {
+    margin: 1.5rem 0 1rem;
+    color: var(--text-color);
+    font-size: 1.25rem;
+}
+
+.step p {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.step i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Guidelines Section */
+.guidelines-section {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.guidelines-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.guideline-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.guideline-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.guideline-card ul {
+    list-style: none;
+}
+
+.guideline-card ul li {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.guideline-card ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.25rem;
+}
+
+/* Monitoring Section */
+.monitoring-section {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+.monitoring-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.monitoring-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.monitoring-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.monitoring-card:hover {
+    transform: translateY(-5px);
+}
+
+.monitoring-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.monitoring-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.monitoring-card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Report Section */
+.report-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 0;
+}
+
+.report-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.report-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.report-info p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.report-channels {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.report-channels li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.report-channels i {
+    color: white;
+}
+
+.report-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.report-button:hover {
+    background-color: var(--background-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.125rem;
+    }
+
+    .features-grid,
+    .process-steps,
+    .guidelines-grid,
+    .monitoring-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-card,
+    .step,
+    .guideline-card,
+    .monitoring-card {
+        padding: 1.5rem;
+    }
+
+    .report-content {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .report-channels li {
+        font-size: 1rem;
+    }
+
+    .report-button {
+        width: 100%;
+        text-align: center;
+    }
+}
