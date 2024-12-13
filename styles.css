@@ -432,11 +432,6 @@ nav {
     background-color: var(--background-color);
 }
 
-.mobile-menu .anunciar-menu-item {
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
 .mobile-menu .login-menu-item {
     background-color: var(--primary-color);
     color: white;
