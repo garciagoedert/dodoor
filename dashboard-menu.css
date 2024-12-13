@@ -205,6 +205,7 @@ main {
 @media (max-width: 768px) {
     :root {
         --sidebar-width: 0;
+        --header-height: 60px;
     }
 
     .sidebar {
@@ -235,8 +236,7 @@ main {
     }
 
     .search {
-        width: 100%;
-        max-width: 300px;
+        display: none;
     }
 
     .user span:not(.material-icons) {
@@ -246,26 +246,11 @@ main {
 
 @media (max-width: 480px) {
     header {
-        height: auto;
-        min-height: var(--header-height);
-        flex-wrap: wrap;
-        gap: 1rem;
-        padding: 0.75rem;
-    }
-
-    :root {
-        --header-height: 120px;
-    }
-
-    .search {
-        order: 2;
-        width: 100%;
-        max-width: none;
+        height: var(--header-height);
+        padding: 0 1rem;
     }
 
     .profile {
-        order: 1;
-        width: 100%;
         justify-content: flex-end;
     }
 }
