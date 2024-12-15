@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Do Door</title>
+    <link rel="stylesheet" href="register-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-card">
+            <div class="logo">
+                <img src="arquivos/logo.svg" alt="DoDoor Logo" class="logo-img">
+            </div>
+            <h2>Cadastro de Proprietário</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required>
+                        <span class="material-icons toggle-password">visibility</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <span class="material-icons toggle-password">visibility</span>
+                    </div>
+                </div>
+                <div class="form-terms">
+                    <label class="terms-checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <span>Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="register-btn">Criar Conta</button>
+            </form>
+            <p class="login-link">
+                Já tem uma conta? <a href="login.html">Fazer Login</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@
     <div class="login-container">
         <div class="login-card">
             <div class="logo">
-                <h1>DoDoor</h1>
+                <img src="arquivos/logo.svg" alt="DoDoor Logo" class="logo-img">
             </div>
             <h2>Acesso do Proprietário</h2>
             <form id="loginForm">
@@ -36,44 +36,11 @@
                 <button type="submit" class="login-btn">Entrar</button>
             </form>
             <p class="signup-link">
-                Ainda não tem uma conta? <a href="#">Cadastre-se</a>
+                Ainda não tem uma conta? <a href="register.html">Cadastre-se</a>
             </p>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Toggle password visibility
-            const togglePassword = document.querySelector('.toggle-password');
-            const passwordInput = document.querySelector('#password');
-
-            togglePassword.addEventListener('click', function() {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                this.textContent = type === 'password' ? 'visibility' : 'visibility_off';
-            });
-
-            // Handle form submission
-            document.getElementById('loginForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Simula autenticação bem-sucedida
-                localStorage.setItem('authToken', 'temp_token_123');
-                
-                // Se checkbox "Lembrar-me" estiver marcado
-                if (document.getElementById('remember').checked) {
-                    localStorage.setItem('rememberLogin', 'true');
-                }
-
-                // Redireciona para o dashboard
-                window.location.href = 'dashboard.html';
-            });
-        });
-
-        // Verifica se já está autenticado
-        if (localStorage.getItem('authToken')) {
-            window.location.href = 'dashboard.html';
-        }
-    </script>
+    <script src="login.js"></script>
 </body>
 </html>
